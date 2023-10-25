@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% block content %}
+<!-----LIST OF JOBS SECTION LIST OF JOBS SECTION LIST OF JOBS SECTION ----->
+<div class="width-100 list-jobs">
+    <div class="container">
+      <h1 style="color: darkgreen; text-align: center">YOUR JOBS DATABASE</h1>
+      <p class="list-jobs-sub-heading">Get the list of all recent jobs</p>
+      <!-----JOB LIST----->
+      <table id="clients">
+        <!-- Table header and data for jobs -->
+        <tr>
+            <th>Company</th>
+            <th>Vacancy</th>
+            <th>Location</th>
+            <th>Years Of Experience</th>
+            <th>Salary</th>
+            <th>Job Details</th>
+            <th>Action</th>
+        </tr>
+        {% for job_listing in job_listings %}
+        <tr>
+            <td>{{ job_listing.company }}</td>
+            <td>{{ job_listing.title }}</td>
+            <td>{{ job_listing.location }}</td>
+            <td>{{ job_listing.experience }}</td>
+            <td>{{ job_listing.salary }}</td>
+            <td>{{ job_listing.job_vacancy_details }}</td>
+            <td class="job-apply-button"><a href="/job-seeker">Apply Now</a></td>
+            <!-- Add more columns as needed -->
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+</div>
+{% endblock %}

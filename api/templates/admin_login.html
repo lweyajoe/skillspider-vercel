@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% block content %}
+<!--Login Page Content-->
+<div class="container">
+    <div class="application-form">
+    <h1 style="color: darkgreen; text-align: center">Admin Login</h1>
+    <div class="contactcontainer">
+    <form method="POST" action="/admin/login">
+        {{ form.csrf_token }}
+        <!-- Your login form fields go here -->
+        <div class="form-group">
+            {{ form.username.label }}
+            {{ form.username }}
+        </div>
+        <div class="form-group">
+            {{ form.password.label }}
+            {{ form.password }}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}  

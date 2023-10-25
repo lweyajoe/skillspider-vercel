@@ -1,0 +1,88 @@
+{% extends 'index.html' %}
+{% block content %}
+<!-- Employer Dashboard Content -->
+<div class="width-100">
+<div class="container">
+    <h1 style="color: darkgreen; text-align: center">Employer Dashboard</h1>
+        <p class="recent-job-sub-heading">Put your details and your listing here!</p>
+        <!-- Employer form goes here -->
+        <!-- Example form fields: name, email, company, website, location, job title, job vacancy details -->
+            <div class="contactcontainer">
+        <form method="POST" action="/employer" enctype="multipart/form-data">
+            <!-- Add your CSRF token -->
+        {{ form.csrf_token }}
+            <!-- Add your form fields here -->
+            <h4 style="color: darkgreen; text-align: center">Contact Information</h4>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            {{ form.name() }}
+        
+        
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            {{ form.email() }}
+        
+        
+        </div>
+        <div class="form-group">
+            <label for="company">Company:</label>
+            {{ form.company() }}
+        
+        
+        </div>
+        <div class="form-group">
+            <label for="website">Website:</label>
+            {{ form.website() }}
+        
+        
+            </div>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            {{ form.location() }}
+        
+        
+        </div>
+        <h4 style="color: darkgreen; text-align: center">Job Deatails</h4>
+        <div class="form-group">
+            <label for="job_title">Job Title:</label>
+            {{ form.job_title() }}
+        
+        
+        </div>
+        <div class="form-group">
+            <label for="experience">Experience:</label>
+            {{ form.experience() }}
+        
+        
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary:</label>
+            {{ form.salary() }}
+        
+        
+        </div>
+        <div class="form-group">
+            <label for="skills">Skills:</label>
+            {{ form.skills() }}
+        
+        
+        </div>
+        <div class="form-group">
+            <label for="job_vacancy_details">Job Vacancy Details:</label>
+            {{ form.job_vacancy_details() }}
+        
+        
+        </div>
+
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+        </form>
+        </div>
+        </div>
+       
+    </div>
+    </div>
+    
+{% endblock %}

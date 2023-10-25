@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<!-- Admin Dashboard Content -->
+<div class="width-100 list-jobs">
+    <div class="width-35">
+        <a href="/admin/logout" class="button-job-post">
+            <i class="fa fa-sign-out" aria-hidden="true"></i> Please Sign Out
+        </a>
+    </div>
+<div class="container">
+    
+    
+        <h1 style="color: darkgreen; text-align: center">Admin Dashboard</h1>
+        <br>
+        <br>        
+        <h3 class="recent-job-sub-heading">Job Seekers</h3>
+        <table id="clients">
+            <!-- Table header and data for job seekers -->
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Position Applied For</th>
+                <th>Curriculum Vitae</th>
+                <th>Expected Salary</th>
+            </tr>
+            {% for job_seeker in job_seekers %}
+            <tr>
+                <td>{{ job_seeker.fname }}</td>
+                <td>{{ job_seeker.lname }}</td>
+                <td>{{ job_seeker.position }}</td>
+                <td>{{ job_seeker.resume }}</td>
+                <td>{{ job_seeker.salary }}</td>
+                <!-- Add more columns as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br><br><br><br>
+        <h3 class="recent-job-sub-heading">Employers</h3>
+        <table id="clients">
+            <!-- Table header and data for employers -->
+            <tr>
+                <th>Employing Company</th>
+                <th>Employer Email</th>
+                <th>Location</th>
+                <th>Job Title - Vacancy</th>
+                <th>Job Details</th>
+            </tr>
+            {% for employer in employers %}
+            <tr>
+                <td>{{ employer.company }}</td>
+                <td>{{ employer.email }}</td>
+                <td>{{ employer.location }}</td>
+                <td>{{ employer.job_title }}</td>
+                <td>{{ employer.job_vacancy_details }}</td>
+                <!-- Add more columns as needed -->
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br><br><br><br><br>
+
+</div>
+</div>
+{% endblock %}

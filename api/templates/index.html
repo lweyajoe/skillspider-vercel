@@ -1,0 +1,196 @@
+<!-----META SECTION----->
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+   <title>Get A Job Today</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   <meta name="robots" content="noindex, nofollow">
+  </head>
+  <body>
+    <!------HEADER SECTION HEADER SECTION HEADER SECTION ------>
+<header>
+    <div class="width-100">
+      <div class="container header">
+        <div class="width-25">
+          <img src="{{ url_for('static', filename='images/image-1.png') }}">
+        </div>
+        <div class="width-40">
+          <ul class="header-menu ">
+            <li>
+              <a href="{{ url_for('index') }}">Home </a>
+            </li>
+            <li>
+              <a href="{{ url_for('jobs') }}">Jobs </a>
+            </li>
+            <li>
+              <a href="{{ url_for('contact') }}">Contact Us </a>
+            </li>
+          </ul>
+        </div>
+        <div class="width-35">
+          <a href="/employer" class="button-job-post">
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i> Submit a Job
+          </a>
+          <a href="/job-seeker" class="button-resume">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Create Resume
+          </a>
+          <a href="/admin/login" class="button-job-post">
+            <i class="fa fa-headphones" aria-hidden="true"></i> Admin
+        </a>
+      </div>
+      </div>
+    </div>
+  </header>
+
+ 
+
+  <!------SEARCH SECTION SEARCH SECTION SEARCH SECTION ------>
+<div class="width-100 banner-section">
+    <div class="container">
+      <h1 class="banner-heading" style="color: darkgreen;">Find The Best Job For Your Future</h1>
+      <p class="banner-para" style="color: darkgreen;">Grow with us and build your career. Be a part of something special. Join our database to make an impact. Take your career to the next level.</p> 
+      </div>
+  </div>
+
+  {% block content %}
+  
+<!-----RECENT JOB SECTION RECENT JOB SECTION RECENT JOB SECTION ----->
+<div class="width-100 recent-job">
+    <div class="container">
+      <h2 style="color: darkgreen; text-align: center">RECENT JOB</h2>
+      <p class="recent-job-sub-heading">Get the list of all recent jobs</p>
+      <!-----JOB LIST----->
+      {% for job_listing in job_listings %}
+
+      <div class="width-50 recent-job">
+        
+        <div class="recent-job-list">
+          <div class="width-100">
+                <h4 class="job-title" style="color: darkgreen;">{{ job_listing.title }}</h4>
+                <p class="job-company" style="color: darkgreen;">{{ job_listing.company }}</p>
+          </div>
+            <!-- Add other job listing details here -->
+          <div class="width-33">
+              <i class="fa fa-briefcase" aria-hidden="true"></i>{{ job_listing.experience }}
+          </div>
+          <div class="width-33">
+                <i class="fa fa-usd" aria-hidden="true"></i>{{ job_listing.salary }}
+          </div> 
+          <div class="width-33">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>{{ job_listing.location }}
+          </div>
+          <div class="width-100">
+                  <p class="job-skill">{{ job_listing.job_vacancy_details }}</p>
+          </div>
+          <div class="width-100">
+                <a href="/job-seeker" class="job-apply-button">Apply Now</a>
+          </div>
+        </div>
+        
+      </div>
+      {% endfor %}
+      
+    
+    </div>
+  </div>
+
+<!-------FEATURE SECTION FEATURE SECTION FEATURE SECTION------->
+<div class="width-100 feature-sect">
+    <div class="container">
+      <div class="width-50">
+        <div class="feature-panel">
+          <img src="{{ url_for('static', filename='images/feature-1.png') }}" class="feature-img">
+          <h4 class="feature-title">DO YOU WANT TO FIND A JOB ?</h4>
+          <p class="feature-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button class="feature-btn"><a href="{{ url_for('jobs') }}">Find Job</a></button>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="feature-panel">
+          <img src="{{ url_for('static', filename='images/feature-2.png') }}" class="feature-img">
+          <h4 class="feature-title"> ARE YOU LOOKING FOR A CANDIDATE ?</h4>
+          <p class="feature-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button class="feature-btn">Find Candidates</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  {% endblock %}
+
+  <!------FOOTER SECTION FOOTER SECTION FOOTER SECTION ------->
+<footer>
+    <div class="width-100 footer-background">
+      <div class="container">
+        <div class="width-50">
+          <!--
+          <h4>QUICK LINKS</h4>
+          <ul class="footer-list">
+            <li>C / C++ Jobs In Nairobi</li>
+            <li>Java Jobs In Nairobi</li>
+            <li>HTML Jobs In Nairobi</li>
+            <li>PHP Jobs In Nairobi</li>
+          </ul>
+        </div>
+        <div class="width-25">
+          <h4>JOB TYPE</h4>
+          <ul class="footer-list">
+            <li>Bootstrap Jobs In Nairobi</li>
+            <li>Website Designer Jobs In Nairobi</li>
+            <li>Mobile App Jobs In Nairobi</li>
+            <li>HR Executive Jobs In Nairobi</li>
+          </ul>
+        </div>
+        <div class="width-25">
+        -->
+          <h4>RESOURCES</h4>
+          <ul class="footer-list">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="/employer">Post Free Job</a></li>
+            <li><a href="/admin/login">Recruiter Login</a></li>
+            <li><a href="/contact">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="width-50">
+          <h4>GET IN TOUCH</h4>
+          <ul class="get-in-touch">
+            <li>
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              <p>E-MAIL: editor@lweya.com</p>
+            </li>
+            <li>
+              <i class="fa fa-headphones" aria-hidden="true"></i>
+              <p><a href="https://wa.me/254717158091">WHATS-APP: +254 717 158091</a></p>
+            </li>
+            <li>
+              <i class="fa fa-fax" aria-hidden="true"></i>
+              <p>CONTACT NO.: +254 717 158091</p>
+            </li>
+            <li>
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              <p><a href="https://github.com/lweyajoe">WEBSITE: https://github.com/lweyajoe</a></p>
+            </li>
+            <li>
+              <img src="{{ url_for('static', filename='images/icon-facebook.png') }}">
+            </li>
+            <li>
+              <img src="{{ url_for('static', filename='images/icon-twitter.png') }}">
+            </li>
+            <li>
+              <img src="{{ url_for('static', filename='images/icon-instagram.png') }}">
+            </li>
+            <li>
+              <img src="{{ url_for('static', filename='images/icon-linkedin.png') }}">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+  <!------FOOTER SECTION FOOTER SECTION FOOTER SECTION ------>
+
+  

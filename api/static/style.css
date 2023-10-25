@@ -1,0 +1,346 @@
+/*****COMMON CSS SECTION*****/
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html, body {
+	font-family: 'Roboto', sans-serif, arial;
+	font-size: 15px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background: url(https://img.freepik.com/free-vector/colorful-technological-background_1048-5298.jpg?w=826&t=st=1694154468~exp=1694155068~hmac=573f5d7ad8068b8c27f0106d9b8684ac72fbd44d0a95bd7b6aae5a464fa44323);
+}
+.container {
+	width: 1170px;
+	margin: 0px auto;
+}
+.width-100 {
+	width: 100%;
+	float: left;
+}
+.width-66 {
+	width: 66%;
+	float: left;
+}
+.width-50 {
+	float: left;
+	width: 50%;
+}
+.width-75 {
+	width: 75%;
+	float: left;
+}
+.width-33 {
+	width: 33%;
+	float: left;
+}
+.width-25 {
+	width: 25%;
+	float: left;
+}
+
+/*****HEADER SECTION*****/
+.header {
+	padding-top: 20px;
+	padding-bottom: 60px
+}
+.header-menu {
+	list-style: none;
+	margin-top: 10px;
+}
+.header-menu li {
+	float: left;
+	font-size: 15px;
+}
+.header-menu a {
+	font-size: 17px;
+	text-decoration: none;
+	color: black;
+	font-weight: 500;
+	padding: 10px;
+}
+.button-job-post {
+	background-color: #e34216;
+	color: white;
+	border: none;
+	border-radius: 2px;
+	font-size: 14px;
+	float: left;
+	padding: 10px;
+	text-decoration: none;
+}
+.button-resume {
+	background-color: #17acda;
+	color: white;
+	border: none;
+	border-radius: 2px;
+	font-size: 14px;
+	float: left;
+	margin-left: 10px;
+	padding: 10px;
+	text-decoration: none;
+}
+
+/*****BANNER SECTION*****/
+.banner-section {
+	background-image: url("../images/banner.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	height: 350px;
+	position: relative;
+	width: 100%;
+}
+.banner-heading {
+	font-size: 40px;
+	color: white;
+	padding-top: 70px
+}
+.banner-para {
+	font-size: 15px;
+	color: #fff;
+	padding-top: 10px;
+}
+
+.search-sect {
+	margin-top: 40px;
+	width: 25%;
+	float: left;
+	position: relative;
+}
+.search-textbox {
+	height: 40px;
+	width: 100%;
+	padding-left: 10px;
+	border-top: none;
+	border-bottom: none;
+	border-color: #d9d9d9;
+	border-right: none;
+	border-width: 1px;
+}
+.search-button {
+	width: 100%;
+	height: 40px;
+	background-color: #e34216;
+	border: none;
+	color: white;
+}
+.search-sect .icons {
+	position: absolute;
+	top: 12px;
+	right: 10px
+}
+
+/*****RECENT JOB SECTION RECENT JOB SECTION*****/
+.recent-job {
+	padding-top: 50px;
+	background-color: #f0f3fa;
+	padding-bottom: 60px;
+}
+
+.recent-job-heading {
+	text-align: center;
+	color: #343a40;
+}
+
+.recent-job-sub-heading {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.recent-job-list {
+	float: left;
+	background-color: white;
+	padding: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.job-title {
+	font-size: 20px;
+}
+
+.job-company {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.job-company i {
+	color: orange;
+	margin-left: 10px;
+}
+
+.job-skill {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.job-apply-button {
+	background: blue;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+	float: right;
+}
+
+/******FEATURE SECTION******/
+.feature-sect {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.feature-panel {
+	background-color: #f9f9f9;
+	text-align: center;
+	padding: 30px;
+	border: 1px solid #f0f3fa;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.feature-title {
+	padding-top: 20px
+}
+
+.feature-desc {
+	margin-top: 10px;
+}
+
+.feature-img {
+	width: 120px;
+	height: 120px;
+	border-radius: 80px;
+	background-color: white;
+}
+
+.feature-btn {
+	background-color: #1650e2;
+	height: 35px;
+	border: none;
+	color: white;
+	border-radius: 4px;
+	font-size: 13px;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+/* LIST OF JOBS SECTION */
+.list-jobs {
+	padding-top: 50px;
+	background-color: #f0f3fa;
+	padding-bottom: 60px;
+}
+
+.list-jobs-heading {
+	text-align: center;
+	color: #343a40;
+}
+
+.list-jobs-sub-heading {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+/******CONTACT FORM******/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.contactcontainer {
+	box-sizing: border-box;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+/******TABLES********/
+#clients {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  #clients td, #clients th {
+	border: 1px solid #ddd;
+	padding: 8px;
+  }
+  
+  #clients tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #clients tr:hover {background-color: #ddd;}
+  
+  #customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #04AA6D;
+	color: white;
+  }
+
+/******FOOTER SECTION******/
+.footer-list {
+	list-style: none;
+	line-height: 35px;
+	padding-top: 20px;
+}
+
+.footer-background {
+	background-color: #222328;
+	padding-top: 60px;
+	padding-bottom: 80px;
+	color: rgba(255, 255, 255, .86);
+}
+
+.get-in-touch {
+	list-style: none;
+	line-height: 15px;
+	padding-top: 20px
+}
+
+.get-in-touch img {
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	border-radius: 0px;
+	float: left;
+	padding-top: 20px
+}
+
+.get-in-touch i {
+	float: left;
+	color: #eb372a;
+	font-size: 16px;
+	line-height: 15px;
+}
+
+.get-in-touch p {
+	padding-left: 30px;
+	color: rgba(255, 255, 255, .86);
+	margin-top: 20px
+}
+
+/******FOOTER SECTION******/

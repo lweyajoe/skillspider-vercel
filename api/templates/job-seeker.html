@@ -1,0 +1,80 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+    <main>
+        <div class="application-form">
+            <h1 style="color: darkgreen; text-align: center">Job Application Form</h1>
+            <div class="contactcontainer">
+                <form method="POST" action="/job-seeker" enctype="multipart/form-data">
+                <!-- Add the CSRF token -->
+                {{ form.csrf_token }}
+                <h4 style="color: darkgreen; text-align: center">Contact Information</h4>
+                <div class="form-inline">
+                    <div class="form-group">
+                        {{ form.fname.label }} {{ form.fname() }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.lname.label }} {{ form.lname() }}
+                    </div>
+                </div>
+                    <div class="form-group">
+                        {{ form.email.label }} {{ form.email() }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.tel.label }} {{ form.tel() }}
+                    </div>
+                    <br>
+                    <h4 style="color: darkgreen; text-align: center">Position</h4>
+                    
+                    <div class="form-group">
+                        {{ form.position.label }} {{ form.position() }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.resume.label }} {{ form.resume() }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.website.label }} {{ form.website() }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.salary.label }} {{ form.salary() }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.joining.label }} {{ form.joining() }}
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>Are you willing to relocate?</label>
+                        <br>
+                        <div class="form-inline flex">
+                            <input type="radio" id="relocation-yes" name="relocation" value="Yes">
+                            <label for="relocation-yes">Yes</label>
+                        </div>
+                        <div class="form-inline flex">
+                            <input type="radio" id="relocation-no" name="relocation" value="No">
+                            <label for="relocation-no">No</label>
+                        </div>
+                        <div class="form-inline flex">
+                            <input type="radio" id="relocation-not-sure" name="relocation" value="Not Sure">
+                            <label for="relocation-not-sure">Not Sure</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        {{ form.last_employer.label }} {{ form.last_employer() }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.address.label }} {{ form.address() }}
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-primary") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}
+
+
