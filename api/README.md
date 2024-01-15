@@ -67,6 +67,7 @@ my_project/
 
 </code>
 
+
 ## Please note: to host on vercel as a vercel app, the project structure becomes;
 
 <code>
